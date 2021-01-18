@@ -21,7 +21,7 @@
     <!-- add login form -->
     <div class="col-lg-4 col-sm-6 col-md-6 col-xs-6">
         <!-- /.login-logo -->
-        <div class="card card-outline-primary shadow" style="margin-top: 2em;">
+        <div class="card card-outline-primary shadow mt-5">
             <div class="card-body login-card-body">
                 <div class="row">
                     <div class="col-5 col-sm-5 col-md-5 col-xs-12 mx-auto">
@@ -29,22 +29,27 @@
                     </div>
                 </div>
                 <div class="col-lg-7 mx-auto mt-4">
-                    <h2 class="login-box-msg">Connexion</h2>
+                    <h2 class="login-box-msg text-gray-dark">Connexion</h2>
                 </div>
+                <div style="margin-top: -20px;">
+                    <p class="col-lg-7 text-xs mx-auto">Accedez a votre espace d'administration</p>
+                </div>
+                <hr>
                 <form action="././index3.html" method="post">
 
                     <div class="form-group mt-2">
                         <label for="username">Nom d'utilisateur</label>
-                        <input type="text" class="form-control form-control-border form-control-sm border-width-2" id="username" placeholder="Nom d'utilisateur">
+                        <input type="text" class="form-control form-control-border form-control-sm border-width-2 text-xs" id="username" placeholder="Nom d'utilisateur">
                     </div>
                     <div class="form-group mt-2">
                         <label for="pwd">Mot de passe</label>
-                        <input type="password" class="form-control form-control-border form-control-sm border-width-2" id="pwd" placeholder="Mot de passe"> </div>
+                        <input type="password" class="form-control form-control-border form-control-sm border-width-2 text-xs" id="pwd" placeholder="Mot de passe">
+                    </div>
                     <div class="row mt-4">
                         <div class="col-12">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" name="terms" class="custom-control-input" id="remenber">
-                                <label class="custom-control-label" for="remenber">Se rappeler de moi</label>
+                                <label class="custom-control-label text-sm" for="remenber">Se rappeler de moi</label>
                             </div>
                         </div>
                         <!-- /.col -->
@@ -52,12 +57,12 @@
                 </form>
 
                 <div class="social-auth-links text-center mb-3">
-                    <a href="#" class="btn btn-block btn-primary btn-sm shadow">
+                    <a href="#" class="btn btn-block btn-primary btn-sm shadow text-bold">
                          Connexion <i class="fas fa-sign-in-alt float-right mt-1"></i>
                     </a>
                 </div>
                 <!-- /.social-auth-links -->
-                <div class="col-lg-5 mx-auto" style="font-weight: 600;">
+                <div class="col-lg-4 mx-auto text-xs" style="font-weight: 600;">
                     <a href="forgot-password.html">Mot de passe oublie</a>
                 </div>
                 <div class="mb-1 mt-2 mx-auto">

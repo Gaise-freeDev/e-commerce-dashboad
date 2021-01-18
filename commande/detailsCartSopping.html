@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Commande</title>
+    <title>Detail de panier</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -254,139 +254,108 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row">
                         <!-- add section -->
-                        <div class="card col-12 shadow-sm">
-                            <div class="card-body row">
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <div class="info-box shadow-sm">
-                                        <span class="info-box-icon"><i class="fas fa-shopping-cart"></i></span>
-
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Demande en cours</span>
-                                            <span class="info-box-number">Regular</span>
-                                        </div>
-                                        <!-- /.info-box-content -->
-                                    </div>
-                                    <!-- /.info-box -->
+                        <div class="card col-12">
+                            <div class="card-header">
+                                <div class="btn-group float-right">
+                                    <a href="javascript:history.go(0)" type="button" class="btn btn-sm btn-default">
+                                        <i class="fas fa-sync"></i>
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <div class="info-box shadow-sm">
-                                        <span class="info-box-icon"><i class="far fa-copy"></i></span>
-
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Shadows</span>
-                                            <span class="info-box-number">Regular</span>
-                                        </div>
-                                        <!-- /.info-box-content -->
+                                <div class="row">
+                                    <div>
+                                        <i class="fas fa-shopping-cart mr-2 text-gray"></i>
+                                        <span class="mt-3 mr-1">Total Carte : </span>
+                                        <span class=""><span class="badge badge-sm bg-warning">500 XAF</span></span>
                                     </div>
-                                    <!-- /.info-box -->
                                 </div>
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <div class="info-box shadow-sm">
-                                        <span class="info-box-icon"><i class="far fa-copy"></i></span>
+                            </div>
+                        </div>
+                    </div>
 
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Shadows</span>
-                                            <span class="info-box-number">Regular</span>
-                                        </div>
-                                        <!-- /.info-box-content -->
-                                    </div>
-                                    <!-- /.info-box -->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Information du client</h3>
                                 </div>
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <div class="info-box shadow-sm">
-                                        <span class="info-box-icon"><i class="far fa-copy"></i></span>
-
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Shadows</span>
-                                            <span class="info-box-number">Regular</span>
-                                        </div>
-                                        <!-- /.info-box-content -->
+                                <div class="card-body">
+                                    <h3 class="text-bold text-blue mb-3 ml-1">Nom du client</h3>
+                                    <div id="list-example" class="list-group">
+                                        <a class="list-group-item list-group-item-action" href="#list-item-1"><b>Date d'enregistrement du compte : </b><span class="float-right">01/11/2021</span></a>
+                                        <a class="list-group-item list-group-item-action" href="#list-item-2"><b>Commandes valides passées : </b><span class="float-right">0</span></a>
+                                        <a class="list-group-item list-group-item-action" href="#list-item-3"><b>Total dépensé depuis l'enregistrement : </b><span class="float-right">0,00</span></a>
                                     </div>
-                                    <!-- /.info-box -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        <h3 class="card-title">Information de la commande</h3>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="text-blue text-bold ml-1 mb-3">Id commande</h3>
+                                    <div id="list-example" class="list-group">
+                                        <a class="list-group-item list-group-item-action" href="#list-item-1"><b>Fait sur : </b><span class="float-right">01/11/2021</span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
+
+                    </div>
+
+                    <div class="row">
                         <div class="card col-12">
                             <div class="card-header">
-                                <h3 class="card-title">Commandes</h3>
+                                <h3 class="card-title mt-1"><i class="fas fa-list-alt mr-2"></i> sommaire du panier</h3>
                             </div>
                             <div class="card-body">
                                 <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
                                     <div class="row">
-                                        <div class="col-sm-12 col-md-9">
-
-                                        </div>
-                                        <div class="col-sm-12 col-md-3 mb-3">
-                                            <span class="ml-2"><b>Rechercher</b></span>
-                                            <input type="text" class="form-control form-control-sm form-control-border" placeholder="Rechercher par reference, client, date... ">
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
                                         <div class="col-sm-12">
-                                            <table id="example1" class="table table-hover dataTable dtr-inline" role="grid" aria-describedby="example1_info">
+                                            <table id="example1" class="table table-hover dataTable dtr-inline text-sm" role="grid" aria-describedby="example1_info">
                                                 <thead>
-                                                    <tr role="row">
-                                                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Reference</th>
-                                                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">nouveau client</th>
-                                                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Livraison</th>
-                                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Client</th>
+                                                    <tr role="row" class="text-center">
+                                                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Product</th>
+                                                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">prix à l'unité</th>
+                                                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Quantité</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Stock</th>
                                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Total</th>
-                                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Paiement</th>
-                                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Status</th>
-                                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Date</th>
-                                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr role="row" class="odd">
-                                                        <td class="dtr-control sorting_1" tabindex="0">M23</td>
+                                                    <tr role="row" class="odd text-center">
+                                                        <td class="dtr-control sorting_1 text-capitalize text-justify" tabindex="0">
+                                                            <img src="../dist/img/avatar.png" class="rounded img-rounded float-left mr-2" style="width: 4em;" alt="...">
+                                                            <span class="text-blue text-bold">Nom de produit</span><br>
+                                                            <span class="text-blue">Couleur du produit</span><br>
+                                                            <span class="text-blue">Ref:</span>
+                                                        </td>
                                                         <td>Non</td>
-                                                        <td>Pointe Noire</td>
-                                                        <td>Gaise</td>
-                                                        <td>500</td>
-                                                        <td>airtel money</td>
-                                                        <td><span class="badge bg-success">effectue</span></td>
-                                                        <td>01 mars 2020</td>
-                                                        <td>
-                                                            <i class="fas fa-eye" style="color: blue;" type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"></i>
-                                                        </td>
+                                                        <td>10</td>
+                                                        <td>10</td>
+                                                        <td>500 XAF</td>
                                                     </tr>
-                                                    <tr role="row" class="even">
-                                                        <td class="dtr-control sorting_1" tabindex="0">M24</td>
-                                                        <td>Oui</td>
-                                                        <td>Dolisie</td>
-                                                        <td>Ken</td>
-                                                        <td>25.000</td>
-                                                        <td>mobile money</td>
-                                                        <td><span class="badge bg-danger">annule</span></td>
-                                                        <td>12 decembre 2020</td>
-                                                        <td>
-                                                            <i class="fas fa-eye" style="color: blue;" type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"></i>
-                                                        </td>
-                                                    </tr>
-
-                                                </tbody>
+                                                    <!-- </tbody>
+                                                <tfoot>
+                                                    <td>
+                                                        <span class="float-left">Total</span>
+                                                        <span class="float-right">500 XAF</span>
+                                                    </td>
+                                                </tfoot> -->
                                             </table>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-8">
-                                            <div class="dataTables_info" id="example1_info" role="status" aria-live="polite"><b>1 à 10 des 57 entrées</b></div>
-                                        </div>
-                                        <div class="col-sm-12 col-md-4">
-                                            <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
-                                                <ul class="pagination btn-xs">
-                                                    <li class="paginate_button page-item previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-                                                    <li class="paginate_button page-item active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                                                    <li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
-                                                    <li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
-                                                    <li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
-                                                    <li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
-                                                    <li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0" class="page-link">6</a></li>
-                                                    <li class="paginate_button page-item next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
-                                                </ul>
+                                            <div class="col-lg-12">
+                                                <hr>
+                                                <span class="float-left">Coût total des produits :	</span>
+                                                <span class="float-right">500 XAF</span><br>
+                                                <hr>
+                                                <div class="text-bold">
+                                                    <span class="float-left">Total</span>
+                                                    <span class="float-right">500 XAF</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

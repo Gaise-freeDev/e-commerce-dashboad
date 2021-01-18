@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Commande</title>
+    <title>Panier</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -254,60 +254,86 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row">
                         <!-- add section -->
-                        <div class="card col-12 shadow-sm">
-                            <div class="card-body row">
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <div class="info-box shadow-sm">
-                                        <span class="info-box-icon"><i class="fas fa-shopping-cart"></i></span>
-
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Demande en cours</span>
-                                            <span class="info-box-number">Regular</span>
-                                        </div>
-                                        <!-- /.info-box-content -->
-                                    </div>
-                                    <!-- /.info-box -->
+                        <div class="card col-12">
+                            <div class="card-header">
+                                <h3 class="card-title mt-1"><i class="fas fa-shopping-cart mr-2"></i> Panier <span class="badge bg-gradient-gray">1</span></h3>
+                                <div class="btn-group float-right">
+                                    <button type="button" class="btn btn-sm btn-default">
+                                      <i class="fas fa-file-export"></i>
+                                    </button>
+                                    <a href="javascript:history.go(0)" type="button" class="btn btn-sm btn-default">
+                                        <i class="fas fa-sync"></i>
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <div class="info-box shadow-sm">
-                                        <span class="info-box-icon"><i class="far fa-copy"></i></span>
-
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Shadows</span>
-                                            <span class="info-box-number">Regular</span>
+                            </div>
+                            <div class="card-body">
+                                <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table id="example1" class="table table-hover dataTable dtr-inline text-sm" role="grid" aria-describedby="example1_info">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Id</th>
+                                                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Commande</th>
+                                                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Client</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Total</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">transporteur</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Date</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">en ligne</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr role="row" class="odd">
+                                                        <td class="dtr-control sorting_1" tabindex="0">M23</td>
+                                                        <td>Non</td>
+                                                        <td>Pointe Noire</td>
+                                                        <td><span class="badge bg-success">10000 XAF</span></td>
+                                                        <td>500</td>
+                                                        <td>02-01-2021</td>
+                                                        <td>effectue</td>
+                                                        <td>
+                                                            <a href="detailsCartSopping.html"><i class="fas fa-eye text-blue"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
-                                        <!-- /.info-box-content -->
                                     </div>
-                                    <!-- /.info-box -->
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <div class="info-box shadow-sm">
-                                        <span class="info-box-icon"><i class="far fa-copy"></i></span>
-
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Shadows</span>
-                                            <span class="info-box-number">Regular</span>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-8">
+                                            <div class="dataTables_info text-sm mt-2" id="example1_info" role="status" aria-live="polite"><b>1 à 10 des 57 entrées</b></div>
                                         </div>
-                                        <!-- /.info-box-content -->
-                                    </div>
-                                    <!-- /.info-box -->
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-12">
-                                    <div class="info-box shadow-sm">
-                                        <span class="info-box-icon"><i class="far fa-copy"></i></span>
-
-                                        <div class="info-box-content">
-                                            <span class="info-box-text">Shadows</span>
-                                            <span class="info-box-number">Regular</span>
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+                                                <ul class="pagination btn-xs">
+                                                    <li class="paginate_button page-item previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                                                    <li class="paginate_button page-item active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                                    <li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
+                                                    <li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
+                                                    <li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
+                                                    <li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
+                                                    <li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0" class="page-link">6</a></li>
+                                                    <li class="paginate_button page-item next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <!-- /.info-box-content -->
                                     </div>
-                                    <!-- /.info-box -->
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card col-12">
+
+
+                        <!-- <div class="card col-lg-10 mx-auto">
+                            <div class="card-header">
+                                <h3 class="card-title float-left"><i class="fas fa-shopping-cart"></i> Panier</h3>
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                        </div> -->
+                        <!-- <div class="card col-12">
                             <div class="card-header">
                                 <h3 class="card-title">Commandes</h3>
                             </div>
@@ -319,13 +345,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         </div>
                                         <div class="col-sm-12 col-md-3 mb-3">
                                             <span class="ml-2"><b>Rechercher</b></span>
-                                            <input type="text" class="form-control form-control-sm form-control-border" placeholder="Rechercher par reference, client, date... ">
+                                            <input type="text" class="form-control form-control-sm form-control-border text-xs" placeholder="Rechercher par reference, client, date... ">
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <table id="example1" class="table table-hover dataTable dtr-inline" role="grid" aria-describedby="example1_info">
+                                            <table id="example1" class="table table-hover dataTable dtr-inline text-sm" role="grid" aria-describedby="example1_info">
                                                 <thead>
                                                     <tr role="row">
                                                         <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Reference</th>
@@ -392,33 +418,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- end section -->
 
-                    <!-- Open modal information -->
-                    <div class="modal fade" id="modal-default">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Detail de la commande "Reference et le nom du client"</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatem nostrum accusamus tempora autem exercitationem quam asperiores corrupti iste aut cumque non fugiat culpa aliquid, itaque aperiam deleniti, vero
-                                        necessitatibus.&hellip;
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.modal-content -->
-                        </div>
-                        <!-- /.modal-dialog -->
-                        <!-- close modal information -->
-
-                    </div>
-                    <!-- /.row -->
                 </div>
                 <!-- /.container-fluid -->
             </div>

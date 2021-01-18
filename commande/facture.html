@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Listes des produits</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
     <!-- Toastr -->
@@ -30,7 +25,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
@@ -235,7 +229,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- /.sidebar -->
         </aside>
 
-        <!-- Content Wrapper. Contains page content -->
+
+        <!-- content  -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <div class="content-header">
@@ -257,160 +252,127 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
                 <!-- /.container-fluid -->
             </div>
-            <!-- /.content-header -->
+            <!-- end content -->
 
-            <!-- Main content -->
+            <!-- facture content -->
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="card col-12 text-sm">
+                        <div class="card col-12 mx-auto">
                             <div class="card-header">
-                                <div class="float-left">
-                                    <h3 class="card-title mt-2"><i class="fas fa-users mr-2"></i> Liste des produits</h3>
-                                </div>
-                                <div class="float-right">
-                                    <a href="addProduct.html" class="btn btn-sm btn-success"><i class="fas fa-user-plus"></i>  Nouveau produit</a>
-                                </div>
+                                <h3 class="float-left card-title mt-1"><b>Facture de  "Reference"</b></h3>
+                                <span class="float-right">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-default">
+        <i class="fas fa-save"></i>
+      </button>
+                                        <button type="button" class="btn btn-sm btn-success">
+        <i class="fas fa-print"></i>
+      </button>
+                                    </div>
+                                </span>
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-sm-12">
-                                        <table id="example1" class="table table-hover dataTable dtr-inline" role="grid" aria-describedby="example1_info">
+                                    <div class="col-lg-4">
+                                        <h4 class="card-title">De</h4>
+                                        <br>
+                                        <address class="text-xs text-justify text-gray">
+                                            Company Name
+                                            <br> 47 Holmes Green, Sophiebury, WP9M 3ZZ
+                                            <br> Email: example@gmail.com
+                                            <br> Phone: +91 5264 251 325
+                                        </address>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h4 class="card-title">To</h4>
+                                        <br>
+                                        <address class="text-xs text-justify text-gray">
+                                            Company Name
+                                            <br> 58 Jamie Ways, North Faye, Q5 5ZP
+                                            <br> Email: example@gmail.com
+                                            <br> Phone: +91 5264 521 943
+                                        </address>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h4 class="card-title">Details</h4>
+                                        <br>
+                                        <address class="text-xs text-justify text-gray">
+                                            Invoice ID:
+                                            <span class="text-dark text-bold">#2365546</span>
+                                            <br> March 25, 2018
+                                            <br> VAT: PL6541215450
+                                        </address>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="card-body p-0">
+                                        <table class="table table-sm">
                                             <thead>
-                                                <tr role="row">
-                                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">N</th>
-                                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Image et nom</th>
-                                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Reference</th>
-                                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Categorie</th>
-                                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Price</th>
-                                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Price</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Quantite</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Status</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Actions</th>
+                                                <tr>
+                                                    <th style="width: 10px">#</th>
+                                                    <th>Item</th>
+                                                    <th>Description</th>
+                                                    <th>Quantite</th>
+                                                    <th>Unite</th>
+                                                    <th>Total</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr role="row" class="odd">
-                                                    <td>01</td>
-                                                    <td class="dtr-control sorting_1" tabindex="0">Delphin</td>
-                                                    <td>BOLOUMA</td>
-                                                    <td>demo2</td>
-                                                    <td>Test@mdp</td>
-                                                    <td>
-                                                        1000 XAF
+                                                <tr class="text-gray text-sm">
+                                                    <td>1.</td>
+                                                    <td style="width: 190px;">Update software</td>
+                                                    <td style="width: 100px;">
+                                                        ljbchcqkcjewjcegeygjqokepjeochecohoewe
                                                     </td>
-                                                    <td>02-01-2020</td>
-                                                    <td>Caisier</td>
-                                                    <td class="nav-link mt-2" data-toggle="dropdown" href="#" aria-expanded="false">
-                                                        <i class="fas fa-ellipsis-v" style="margin-top: -130px;"></i>
-                                                        <!-- </a> -->
-                                                        <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                                            <a href="addProduct.html" class="dropdown-item">
-                                                                <i class="fas fa-eye mr-2" style="color: blue;"></i> Detail
-                                                            </a>
-                                                            <a href="addProduct.html" class="dropdown-item">
-                                                                <i class="fas fa-edit mr-2" style="color: green;"></i> Modification
-                                                            </a>
-                                                            <a type="button" class="dropdown-item">
-                                                                <i class="fas fa-trash mr-2" style="color: red;"></i> Supprimer
-                                                            </a>
-                                                        </div>
-                                                    </td>
+                                                    <td style="width: 80px;">10</td>
+                                                    <td style="width: 90px;">50 XAF</td>
+                                                    <td style="width: 90px;">500 XAF</td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                                <hr class="mt-4">
+                                <div class="row">
+                                    <div class="offset-10 mt-2 p-2 text-sm text-justify">
+                                        <span class="float-left mr-lg-5"><b>Sous-total</b></span>
+                                        <span class="float-right">4567890 XAF</span><br>
+                                        <span class="float-left mr-lg-5"><b>à (10%)</b></span>
+                                        <span class="float-right">4567890 XAF</span><br>
+                                        <span class="float-left mr-lg-5"><b>Total</b></span>
+                                        <span class="float-right">4567890 XAF</span><br>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /.row -->
                 </div>
-                <!-- /.container-fluid -->
             </div>
-            <!-- /.content -->
-        </div>
-        <!-- /.content-wrapper -->
+            <!-- end facture content -->
 
-        <!-- modal content -->
-        <div class="modal fade" id="modal">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header mx-auto">
-                        <h4 class="modal-title">Suppression du client</h4>
-                    </div>
-                    <div class="modal-body mx-auto">
-                        <p>Souhaites-vous supprimer ce client&hellip;</p>
-                        <div class="row">
-                            <div class="col-8 mx-auto">
-                                <a type="button" class="btn btn-default btn-sm" data-dismiss="modal"><i class="fas fa-ban mr-2"></i> Non</a>
-                                <a type="button" class="btn btn-success btn-sm swalDefaultSuccess" data-dismiss="modal"><i class="fas fa-check mr-2"></i> Oui</a>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Control sidebar content goes here -->
+                <div class="p-3">
+                    <h5>Title</h5>
+                    <p>Sidebar content</p>
                 </div>
-                <!-- notification de suppression -->
+            </aside>
+            <!-- /.control-sidebar -->
 
-
-                <!-- fin de la notification de suppression -->
-
-                <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <!-- To the right -->
+                <div class="float-right d-none d-sm-inline">
+                    Anything you want
+                </div>
+                <!-- Default to the left -->
+                <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+            </footer>
         </div>
-        <!-- block content -->
-
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-            <div class="p-3">
-                <h5>Title</h5>
-                <p>Sidebar content</p>
-            </div>
-        </aside>
-        <!-- /.control-sidebar -->
-
-        <!-- Main Footer -->
-        <footer class="main-footer">
-            <!-- To the right -->
-            <div class="float-right d-none d-sm-inline">
-                Anything you want
-            </div>
-            <!-- Default to the left -->
-            <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-        </footer>
-    </div>
-    <!-- ./wrapper -->
-
-    <!-- REQUIRED SCRIPTS -->
-
-    <!-- jQuery -->
-    <script src="../plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- SweetAlert2 -->
-    <script src="../plugins/sweetalert2/sweetalert2.min.js"></script>
-    <!-- Toastr -->
-    <script src="../plugins/toastr/toastr.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="../dist/js/adminlte.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="../dist/js/demo.js"></script>
-    <script>
-        let Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000
-        });
-
-        $('.swalDefaultSuccess').click(function() {
-            Toast.fire({
-                icon: 'success',
-                title: 'Le client a ete supprime.'
-            })
-        });
-    </script>
 </body>
 
 </html>
